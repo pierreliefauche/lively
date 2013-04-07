@@ -5,9 +5,16 @@ Fork this repository (please make a private repository) and push your commits as
 
 **Things to think about:**
 - Tests
-- If possible, don't use NPM but only Node.js APIs
+- If possible, don't use external dependencies (for example: Node.js APIs instead of NPM, or Apple's SDK instead of external libs).
 
-Challenge #twitter
+Challenge #twitter (node)
 -----
 
 Build a node app (command prompt app is good) that asks for a search query, then it starts to stream live tweets that are related to that query.
+
+Challenge #grid (mobile)
+-----
+
+Build an Android app or iOS app that reproduce the calendar grid from [Sunrise iOS app](https://itunes.apple.com/us/app/sunrise-calendar./id599114150?mt=8). Just the calendar grid experience, nothing else.
+
+![screenshots](http://cl.ly/image/2r2E3x471040/content)
