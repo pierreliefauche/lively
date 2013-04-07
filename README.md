@@ -15,6 +15,6 @@ Build a node app (command prompt app is good) that asks for a search query, then
 Challenge #grid (mobile)
 -----
 
-Build an Android app or iOS app that reproduce the calendar grid from [Sunrise iOS app](https://itunes.apple.com/us/app/sunrise-calendar./id599114150?mt=8). Just the calendar grid experience, nothing else.
+Build an Android app or iOS app that reproduce the calendar grid from [Sunrise iOS app](https://itunes.apple.com/us/app/sunrise-calendar./id599114150?mt=8). Just the calendar grid experience, nothing else. Don't worry about the design, just the implementation.
 
 ![screenshots](http://cl.ly/image/2r2E3x471040/content)
