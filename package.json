@@ -1,0 +1,24 @@
+{
+  "name": "sunrise-job",
+  "version": "0.0.1",
+  "description": "Sunrise’s Node challenge",
+  "homepage": "https://github.com/pierreliefauche/sunrise-job",
+  "author": "Pierre-Élie Fauché",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pierreliefauche/sunrise-job.git"
+  },
+  "directories": {
+    "lib": "./lib"
+  },
+  "scripts": {
+    "test": "node test/run.js"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "devDependencies": {
+    "oauth": ">=0.9.10",
+    "urun": "~0.0.6"
+  }
+}
