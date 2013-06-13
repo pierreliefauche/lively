@@ -10,7 +10,7 @@ process.stdin.setEncoding('utf8');
 var query;
 process.stdin.on('data', function (text) {
   if (query) {
-    lively(query).removeListener('tweet', printTweet);
+    lively.off(query, printTweet);
     console.log('Tired of "' + query + '"? I can understand.');
   }
 
@@ -22,7 +22,7 @@ process.stdin.on('data', function (text) {
   }
 
   console.log('\nLet’s look for tweets matching "' + query + '"…');
-  lively(query, printTweet, function(error) {
+  lively.on(query, printTweet, function(error) {
     console.error('Yikes! What just happened?!', error);
   });
 });

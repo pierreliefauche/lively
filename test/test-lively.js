@@ -22,4 +22,8 @@ test('lively', {
     assert.strictEqual(lively(',abc,test'), lively('test , abc'));
   },
 
+  'does not throw an error when detaching events from undefined request': function() {
+    lively.off('does not exist', function(){}, function(){});
+  },
+
 });
