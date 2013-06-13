@@ -5,11 +5,19 @@ var normalizeTrack = require('../lib/normalizeTrack');
 
 var giveAndGet = function(give, get) {
   return function() {
-    assert.equal(normalizeTrack(give), get);
+    assert.strictEqual(normalizeTrack(give), get);
   };
 };
 
-test('normalizeTrack with strings', {
+test('normalizeTrack', {
+
+  'returns null for arrays': giveAndGet(['test', 42], null),
+
+  'returns null for objects': giveAndGet({ test: 42 }, null),
+
+  'returns null for null values': giveAndGet(null, null),
+
+  'returns null for empty query': giveAndGet('   ,,    ,', null),
 
   'returns lowercase strings': giveAndGet('TeST', 'test'),
 
