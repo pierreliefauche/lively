@@ -1,16 +1,29 @@
-var app = require('http').createServer(handler);
+var app = require('http').createServer(server);
 var io = require('socket.io').listen(app);
 var fs = require('fs');
+
 var lively = require('./lib/lively');
 
 app.listen(process.env.PORT || 8080);
 
-function handler (req, res) {
-  fs.readFile(__dirname + '/public/index.html',
+function server(req, res) {
+  var filePath = req.url;
+
+  // Basic security check
+  if (filePath.indexOf('..') !== -1) {
+    res.writeHead(404);
+    return res.end('Invalid URL');
+  }
+
+  if (filePath === '/') {
+    filePath += 'index.html';
+  }
+
+  fs.readFile(__dirname + '/public' + filePath,
   function (err, data) {
     if (err) {
       res.writeHead(500);
-      return res.end('Error loading index.html');
+      return res.end('Error loading file at path '+ filePath);
     }
 
     res.writeHead(200);
