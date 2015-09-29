@@ -1,6 +1,8 @@
 Lively: Challenge #twitter (node)
 ===
 
+![](http://g.recordit.co/tvi6YrvK70.gif)
+
 First approach: wrap the http request in a new object that inherits EventEmitter.
 
 Final approach: requests are event emitters themselves, so use them directly by extending them. Provide convenience methods for easy bind/unbind of events and to re-use existing requests if several clients make the same search.
